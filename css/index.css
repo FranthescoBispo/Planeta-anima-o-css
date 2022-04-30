@@ -1,0 +1,183 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    overflow: hidden;
+    background: rgb(3, 4, 20);
+}
+
+.sol {
+    height: 300px;
+    width: 300px;
+    background: yellow;
+    position: absolute;
+    left: -120px;
+    top: -120px;
+    border-radius: 200px;
+    border: 1px solid rgb(201, 201, 28);
+}
+
+.help {
+    width: 10%;
+    transform: rotate(15deg);
+    margin-top: -29px;
+    margin-left: 60px;
+    animation: help 1s infinite linear alternate;
+}
+
+.astronauta {
+    animation: astro 30s infinite linear alternate;
+    position: absolute;
+    z-index: -5;
+    left: -0;
+}
+
+.astro {
+    position: absolute;
+    width: 10%;
+    z-index: -0; 
+    animation: word 10s infinite linear;
+}
+
+.nu.astronauta {
+    animation: word;
+    border: 1px solid white;
+    border-radius: 0;
+    height: 50px;
+}
+
+.nuvem {
+    width: 50%;
+    position: absolute;
+    z-index: 5;
+    transform: rotate(-42deg);
+}
+
+.pisca {
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+    background: red;
+    animation: pisca .450s infinite linear;
+    margin-left: 140px;
+    margin-top: -30px;
+    z-index: 400;
+    position: absolute;
+}
+
+.et {
+    width: 10%;
+}
+
+.sate {
+    width: 8%;
+    animation: word 10s linear infinite;
+}
+
+.plane {
+    width: 17%;
+    transform: rotate(-55deg);
+    z-index: 12;
+    position: absolute;
+}
+
+.nuvem-small {
+    width: 30%;
+    position: absolute;
+    z-index: 5;
+    transform: rotate(30deg);
+    z-index: 50;
+    right: 0;
+    margin-top: -60px;
+}
+
+.nuvem-big {
+    width: 60%;
+    position: absolute;
+    z-index: 5;
+    transform: rotate(19deg);
+    z-index: 50;
+    margin-top: 246px;
+}
+
+.nu {
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    animation: word 30s infinite linear;
+    position: absolute;
+    z-index: 10;
+    margin-right: 90px;
+}
+
+.nu.sate {
+    height: 900px;
+    width: 900px;
+    border-radius: 500px;
+    margin-right: 100px;
+}
+
+.nu.plane {
+    width: 440px;
+    height: 440px;
+    border-radius: 400px;
+    animation: word 20s infinite linear;
+}
+
+.nu.small {
+    animation: word 25s infinite linear;
+}
+
+.nu.big {
+    animation: word 35s infinite linear;
+}
+
+.word-image {
+    width: 80%;
+    animation: word 50s infinite linear;
+    z-index: -1;
+}
+
+@keyframes word {
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pisca {
+    from {
+        background: red;
+    }
+
+    to {
+        background: yellow;
+    }
+}
+
+@keyframes foguete {
+    from {
+        right: -1;
+    }
+
+    to {
+        margin-top: -400px;
+        margin-right: 400px;
+    }
+}
+
+@keyframes astro {
+    100% {
+        transform: translateX(calc(100vw - 10px));
+    }
+}
+
+@keyframes help {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
